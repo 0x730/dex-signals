@@ -1,0 +1,12 @@
+/node_modules
+/src/client/node_modules
+/src/client/build
+/.idea/
+/logs/
+/solidity_codes
+*.iml
+.env
+.env.*
+!.env.example
+!.env.release.example
+.DS_Store

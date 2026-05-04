@@ -1,0 +1,50 @@
+{
+  "name": "bots-signals",
+  "version": "1.0.3",
+  "description": "Token monitoring, scoring, signals, and paper trading dashboard.",
+  "license": "MIT",
+  "scripts": {
+    "start": "pm2 start ecosystem.api.config.js --only dexy-dev-signals",
+    "lint": "eslint .",
+    "test": "node --test \"src/tests/unit/**/*.test.js\"",
+    "test:unit": "node --test \"src/tests/unit/**/*.test.js\"",
+    "check:public": "node scripts/check-public.js",
+    "release:public:prepare": "node scripts/prepare-public-release.js",
+    "release:public:publish": "node scripts/publish-public-release.js",
+    "migrate": "knex migrate:latest",
+    "gecko-worker": "node src/workers/geckoWorker.js",
+    "continuous-backfill": "node src/workers/continuousBackfillWorker.js",
+    "dextools-worker": "node src/workers/inactive/dextoolsWorker.js",
+    "tokensniffer-worker": "node src/workers/inactive/puppeteerTokenSnifferWorker.js",
+    "dev": "nodemon src/index.js",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml}\"",
+    "fmt": "npm run format",
+    "client-install": "cd src/client && npm install",
+    "client-build": "cd src/client && npm run build",
+    "client-dev": "cd src/client && npm start",
+    "build": "npm run client-install && npm run client-build",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "decimal.js": "^10.4.3",
+    "dotenv": "^16.4.7",
+    "express-rate-limit": "^7.5.0",
+    "gpt-3-encoder": "^1.1.4",
+    "jsdom": "^26.0.0",
+    "knex": "^3.1.0",
+    "mysql2": "^3.9.2",
+    "openai": "^4.78.1",
+    "puppeteer": "^22.5.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "winston": "^3.12.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.15.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.3.3"
+  }
+}
