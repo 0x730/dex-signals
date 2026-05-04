@@ -1,0 +1,114 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #0a3880, #0d47a1, #1565c0);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 1rem;
+  background: rgba(13, 71, 161, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00796b, #009688, #4db6ac);
+  opacity: 0.8;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #e65100, #f57c00);
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 0 3px 10px rgba(230, 81, 0, 0.3);
+}
+
+.brand-logo i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.brand-text {
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav {
+  margin-left: 20px;
+}
+
+.nav-item {
+  margin: 0 5px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: white !important;
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.95), rgba(46, 125, 50, 0.95));
+    margin: 0.5rem -1rem -0.8rem;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-link {
+    padding: 0.8rem 1rem;
+    margin: 0.2rem 0;
+  }
+
+  .nav-link.active {
+    border-radius: 5px;
+  }
+}
