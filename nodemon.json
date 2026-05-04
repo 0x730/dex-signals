@@ -1,0 +1,10 @@
+{
+  "watch": ["src"],
+  "ignore": [
+    "src/solidity_codes/base/**",
+    "src/solidity_codes/base/*.sol",
+    "src/solidity_codes/base/*.json"
+  ],
+  "ext": "js,json",
+  "verbose": true
+}
