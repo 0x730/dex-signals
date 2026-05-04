@@ -1,0 +1,31 @@
+# Private source-control and local runtime state
+.git/
+.ai/
+.agents/
+.codex/
+.qodo/
+.idea/
+*.iml
+
+# Secrets and machine-local config
+.env
+.env.*
+!.env.example
+!.env.release.example
+
+# Dependencies and generated artifacts
+node_modules/
+src/client/node_modules/
+src/client/build/
+logs/
+data/
+data/temp/
+data/solidity_codes/
+coverage/
+
+# Internal project-management or historical material
+PM/
+archive/
+research/
+dextools-improvements.md
+todo.md
