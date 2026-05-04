@@ -1,0 +1,112 @@
+/* WideScreen.css - Styles for wide screen layouts */
+
+/* Add padding to container-fluid for better readability on wide screens */
+@media (min-width: 1400px) {
+  .main-content {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .container-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* Limit the maximum width of content areas for better readability */
+  .table-responsive {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Adjust card layouts for wide screens */
+  .row {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Enhance visual elements for wide screens */
+  .card {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Improve spacing for wide screens */
+  .homepage-header {
+    padding: 35px;
+    margin-bottom: 40px;
+  }
+
+  /* Enhance table appearance on wide screens */
+  .table thead th {
+    padding: 18px 20px;
+  }
+
+  .table tbody td {
+    padding: 18px 20px;
+  }
+
+  /* Add decorative elements for wide screens */
+  .home-container::before,
+  .home-container::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.08) 0%, rgba(139, 195, 74, 0.05) 50%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  /* Improve TokenDetail page layout for wide screens */
+  .token-info-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Enhance card layouts in TokenDetail */
+  .card {
+    margin-bottom: 2rem;
+  }
+
+  .home-container::before {
+    top: -100px;
+    right: -100px;
+  }
+
+  .home-container::after {
+    bottom: -100px;
+    left: -100px;
+  }
+}
+
+/* Extra wide screens */
+@media (min-width: 1800px) {
+  .main-content {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .container-fluid {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  /* Further enhance visual elements for extra wide screens */
+  .card {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Add more space between elements */
+  .row > [class*="col-"] {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Enhance decorative elements */
+  .home-container::before,
+  .home-container::after {
+    width: 400px;
+    height: 400px;
+  }
+}
