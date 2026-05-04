@@ -1,0 +1,151 @@
+.token-header {
+  margin-bottom: 2rem;
+}
+
+.token-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.token-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.info-item {
+  margin-bottom: 1rem;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  font-size: 1.1rem;
+}
+
+.info-value code {
+  word-break: break-all;
+  background-color: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.card-header {
+  background: linear-gradient(90deg, #f1f8e9, #e8f5e9);
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Market information cards with gradients */
+.market-card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.market-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.15);
+}
+
+.market-card .card-body {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-left: 3px solid #2e7d32;
+  padding: 1.5rem;
+}
+
+.market-card h5 {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.market-card h3 {
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+/* Add gradient text for price changes */
+.text-success {
+  background: linear-gradient(90deg, #2e7d32, #4caf50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.text-danger {
+  background: linear-gradient(90deg, #d32f2f, #f44336);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.paper-trading-card {
+  background-color: #f0f9ff;
+  border-color: #cfe2ff;
+}
+
+.paper-trading-card .card-header {
+  background-color: #e0f2fe;
+  border-color: #cfe2ff;
+}
+
+.security-data {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+}
+
+.btn-outline-primary {
+  color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .token-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .token-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
